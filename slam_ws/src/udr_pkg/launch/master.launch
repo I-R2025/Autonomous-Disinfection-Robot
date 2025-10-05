@@ -1,0 +1,20 @@
+<launch>
+    <node pkg="udr_pkg" type="udr_motion_sensor_node" name="control_pub" output="screen">
+    </node>
+    <node pkg="teleop_twist_joy" name="teleop_twist_joy" type="teleop_node" output="screen">
+    </node>
+    <node name="joy_node" pkg="joy" type="joy_node" output="screen">
+    </node>
+     <node pkg="udr_pkg" type="encoder_odom_publisher1.py" name="odomnode" output="screen">
+    </node>
+    <include file="$(find urdf_udr_new)/launch/display.launch" />
+    /node>
+    <node pkg="openzen_sensor" type="openzen_sensor_node" name="imu_node" output="screen">
+    </node>
+    <include file="$(find urg_node)/launch/urg_lidar.launch" />
+    <include file="$(find ce30c_driver)/launch/benewake_ce30c.launch" />
+    <include file="$(find robot_localiz_pkg)/launch/robot_localization.launch" />
+    <include file="$(find amcl)/launch/amcl_diff.launch" scan_topic="scan"/>
+    
+	
+</launch>

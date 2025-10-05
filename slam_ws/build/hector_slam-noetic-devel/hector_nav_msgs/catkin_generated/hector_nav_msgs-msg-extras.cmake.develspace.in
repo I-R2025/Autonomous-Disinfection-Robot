@@ -1,0 +1,2 @@
+set(hector_nav_msgs_MESSAGE_FILES "")
+set(hector_nav_msgs_SERVICE_FILES "/home/izza/Documents/slam_ws/src/hector_slam-noetic-devel/hector_nav_msgs/srv/GetDistanceToObstacle.srv;/home/izza/Documents/slam_ws/src/hector_slam-noetic-devel/hector_nav_msgs/srv/GetRecoveryInfo.srv;/home/izza/Documents/slam_ws/src/hector_slam-noetic-devel/hector_nav_msgs/srv/GetRobotTrajectory.srv;/home/izza/Documents/slam_ws/src/hector_slam-noetic-devel/hector_nav_msgs/srv/GetSearchPosition.srv;/home/izza/Documents/slam_ws/src/hector_slam-noetic-devel/hector_nav_msgs/srv/GetNormal.srv")

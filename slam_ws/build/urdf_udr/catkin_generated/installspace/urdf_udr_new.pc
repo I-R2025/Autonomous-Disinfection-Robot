@@ -1,0 +1,8 @@
+prefix=/home/izza/Documents/slam_ws/install
+
+Name: urdf_udr_new
+Description: Description of urdf_udr_new
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

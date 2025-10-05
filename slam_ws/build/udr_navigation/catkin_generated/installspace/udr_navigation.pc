@@ -1,0 +1,8 @@
+prefix=/home/izza/Documents/slam_ws/install
+
+Name: udr_navigation
+Description: Description of udr_navigation
+Version: 0.6.10
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

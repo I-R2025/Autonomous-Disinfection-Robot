@@ -1,0 +1,10 @@
+<launch>
+    <node pkg="udr_pkg" type="udr_motion_sensor_node2" name="control_pub" output="screen">
+    </node>
+    <node pkg="teleop_twist_joy" name="teleop_twist_joy" type="teleop_node" output="screen">
+    </node>
+    <node name="joy_node" pkg="joy" type="joy_node" output="screen">
+    </node>
+     <!--node pkg="udr_pkg" type="encoder_odom_publisher1.py" name="odomnode" output="screen">
+    </node-->
+</launch>

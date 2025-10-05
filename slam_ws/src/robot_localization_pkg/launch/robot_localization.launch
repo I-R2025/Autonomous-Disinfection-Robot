@@ -1,0 +1,41 @@
+<launch>
+  <!-- EKF node for localization -->
+
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization_node" output="screen">
+    <param name="two_d_mode" value="true" />
+    <!-- Odometry input -->
+    <param name="odom0" value="/odom" />
+    
+    
+ <!--   <param name="odom0_config" value="[true, true, false, false, false, false, false, false, false, false, false, false, false, false, true]" /> -->
+    <rosparam param="odom0_config">[true, true, false,
+                        false, false, true,
+                        true, true, false,
+                        false, false, true,
+                        false, false, false]</rosparam>
+    <param name="odom0_queue_size" value="10" />
+
+    <!-- IMU input -->
+    <param name="imu0" value="/imu/data" />
+    <rosparam param="imu0_config">[false,  false,  false,
+                        false,  false, true,
+                        false,  false,  false,
+                        false,  false, true,
+                        true, false,  false,]</rosparam>
+ <!--   <param name="imu0_config" value="[false, false, false, false, , true, true, true, true, false, false, false, false, false, false]" /> -->
+    <param name="imu0_queue_size" value="10" />
+    <param name="imu0_differential" value="false" />
+    
+    <!-- Global frame -->
+    <param name="world_frame" value="odom" />
+    <param name="map_frame" value="map" />
+    <param name="odom_frame" value="odom" />
+   
+    
+    <!-- Base frame -->+
+    <param name="base_link_frame" value="base_link" />
+    
+     <param name="publish_tf" value="false" />
+  </node>
+</launch>
+
