@@ -83,29 +83,29 @@ They take ac power as input so inverter with battery is used to power them up. T
 If you do not currently have access to the hardware, you can still test the robot's software stack in a simulation environment using the following steps:
 
 1. Clone the repository
-git clone https://github.com/I-R2025/Autonomous-Disinfection-Robot.git
+<pre> <code> git clone https://github.com/I-R2025/Autonomous-Disinfection-Robot.git</code> </pre>
 
 2. Navigate to the workspace
-cd Autonomous-Disinfection-Robot/slam_ws
+<pre> <code>cd Autonomous-Disinfection-Robot/slam_ws</code> </pre>
 
 3. Build the workspace
-catkin_make
+<pre> <code>catkin_make</code> </pre>
 
 4. Source the setup file
-source devel/setup.bash
+<pre> <code>source devel/setup.bash</code> </pre>
 
 5. Launch ROS Core
-roscore
+<pre> <code>roscore</code> </pre>
 
 6. In new terminal tabs or windows, run the following
 -Publish static transforms
-rosrun tf2_ros static_transform_publisher 0 0 0 0 0 0 odom base_link
-rosrun tf2_ros static_transform_publisher 0 0 0 0 0 0 map odom
+<pre> <code>rosrun tf2_ros static_transform_publisher 0 0 0 0 0 0 odom base_link</code> </pre>
+<pre> <code>rosrun tf2_ros static_transform_publisher 0 0 0 0 0 0 map odom</code> </pre>
 
 -Load a sample map
-rosrun map_server map_server src/maps/default.yaml
+<pre> <code>rosrun map_server map_server src/maps/default.yaml</code> </pre>
 
 -Launch the URDF model in RViz
-roslaunch urdf_udr_new display.launch
+<pre> <code>roslaunch urdf_udr_new display.launch</code> </pre>
 
 This will allow you to visualize the robot's URDF and simulated transforms in RViz without needing the physical robot.
