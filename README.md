@@ -109,3 +109,8 @@ If you do not currently have access to the hardware, you can still test the robo
 <pre> <code>roslaunch urdf_udr_new display.launch</code> </pre>
 
 This will allow you to visualize the robot's URDF and simulated transforms in RViz without needing the physical robot.
+
+![Alt text](slam.png)
+
+
+![Alt text](slam1.png)
